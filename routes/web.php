@@ -21,6 +21,12 @@ Route::get('/p/create', 'PostsController@create');
 
 Route::post('/p', 'PostsController@store');
 
+Route::get('/p/{post}', 'PostsController@show');
+
 Route::get('/profile/{user}', 'profilesController@index')->name('profile.show');
 
-Route::get('/p/{post}', 'PostsController@show');
+// show the edit profile page
+Route::get('/profile/{user}/edit', 'profilesController@edit')->name('profile.edit');
+
+// update profile
+Route::patch('/profile/{user}', 'profilesController@update')->name('profile.update');
