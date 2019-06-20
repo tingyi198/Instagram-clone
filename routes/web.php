@@ -1,4 +1,5 @@
 <?php
+use App\Mail\NewUserWelcomeMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,13 @@
 
 Auth::routes();
 
+
 Route::get('/', 'PostsController@index');
+
+Route::get('/mail', function () {
+    // return view('emails.welcome_email');
+    return new NewUserWelcomeMail();
+});
 
 Route::get('/p/create', 'PostsController@create');
 

@@ -27,7 +27,7 @@
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div><img class="pr-3" src="/svg/freeCodeCampLogo.svg" alt="" style="height:20px;border-right:1px solid #333;"></div>
-                    <a href="/profile/{{auth()->user()->id}}" class="pl-3 pt-1 text-dark">
+                    <a href="/" class="pl-3 pt-1 text-dark">
                         freeCodeGram
                     </a>
                 </a>
