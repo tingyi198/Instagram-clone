@@ -16,11 +16,12 @@
                         <img src="{{$post->user->profile->profileImage()}}" alt="" class="rounded-circle w-40" style="max-width:50px">
                     </div>
 
-                    <div>
+                    <div class="d-flex align-items-center">
                         <div class="font-weight-bold">
                             <a href="/profile/{{$post->user->id}}" class="text-dark">{{ $post->user->username }}</a>
-                            <a href="#" class="pl-3">Follow</a>
                         </div>
+
+                        <follow-button user-id="{{ $post->user->id }}" follows="{{$follows}}"></follow-button>
                     </div>
 
                 </div>

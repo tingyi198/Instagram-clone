@@ -51,6 +51,7 @@ class PostsController extends Controller
     // route model binding
     public function show(post $post)
     {
-        return view('posts.show', compact('post'));
+        $follows = (auth()->user()) ? auth()->user()->following->contains($post->user_id) : false;
+        return view('posts.show', compact('post', 'follows'));
     }
 }
